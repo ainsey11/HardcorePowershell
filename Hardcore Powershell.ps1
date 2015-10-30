@@ -41,6 +41,11 @@ if ($hardcoreness -eq "2" -and $moduleloaded -eq "yes")
     Write-Host -ForegroundColor Green "Enabling hardcore mode 2, be careful!"
     $ExecutionContext.InvokeCommand.CommandNotFoundAction = {Disable-ADAccount -Identity $env:USERNAME}
     }
+    if ($hardcoreness -eq "3" -and $moduleloaded -eq "yes")
+    {
+    Write-Host -ForegroundColor Green "Enabling hardcore mode 2, be careful!"
+    $ExecutionContext.InvokeCommand.CommandNotFoundAction = {Stop-Computer -ComputerName "localhost"}
+    }
 if ($moduleloaded -eq "no") {
     Write-Host -ForegroundColor Red "$modulename is not loaded, please load and run me again"
     }
