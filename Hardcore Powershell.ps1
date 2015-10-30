@@ -43,7 +43,7 @@ if ($hardcoreness -eq "2" -and $moduleloaded -eq "yes")
     }
     if ($hardcoreness -eq "3" -and $moduleloaded -eq "yes")
     {
-    Write-Host -ForegroundColor Green "Enabling hardcore mode 2, be careful!"
+    Write-Host -ForegroundColor Green "Enabling hardcore mode 3, be careful!"
     $ExecutionContext.InvokeCommand.CommandNotFoundAction = {Stop-Computer -ComputerName "localhost"}
     }
 if ($moduleloaded -eq "no") {
